@@ -41,7 +41,8 @@ const App = () => {
       {/* Sticky Header */}
       <header className="sticky top-0 z-50 bg-white border-b-2 border-black flex justify-between items-center p-4">
         <div className="flex items-center gap-3">
-          <Logo className="h-8 w-8" color="black" />
+          {/* <Logo className="h-8 w-8" color="black" /> */}
+          <img src="images/2.svg" alt="Decorative Logo" className="h-12 w-12" />
           <h1 className="text-2xl font-black tracking-tighter uppercase hidden sm:block">Approacher<span className="text-[#FF3B30]">.Studio</span></h1>
         </div>
         
@@ -113,8 +114,9 @@ const App = () => {
                 </div>
 
                 {/* Decorative Watermark Logo */}
-                <div className="absolute right-[-80px] bottom-[-40px] opacity-5 pointer-events-none hidden lg:block z-0">
-                   <Logo className="h-[500px] w-[500px]" color="black" />
+                <div className="absolute right-[-250px] bottom-[-280px] opacity-10 pointer-events-none hidden lg:block z-0">
+                   <img src="images/2.svg" alt="Decorative Logo" className="h-[900px] w-[900px]" />
+                   
                 </div>
              </div>
              
@@ -199,16 +201,22 @@ const App = () => {
         </Section>
 
         {/* MANIFESTO */}
-        <Section id="manifesto" title={content.manifesto.title} className="bg-[#0047BB] text-white">
+        <Section id="manifesto" title={content.manifesto.title} subtitle={content.manifesto.subtitle} className="bg-[#0047BB] text-white">
           <div className="grid md:grid-cols-2 gap-12 text-white">
              <div>
-                <h3 className="text-2xl font-bold uppercase mb-4 border-b-2 border-white pb-2 inline-block text-black">{content.manifesto.philosophies[0].title}</h3>
-                <p className="text-xl md:text-2xl font-medium leading-relaxed text-black">
+                <h3 className="text-2xl font-bold uppercase mb-4 border-b-2 border-grey pb-2 inline-block text-black">{content.manifesto.philosophies[0].title}</h3>
+                <p className="text-xl md:text-xl font-regular leading-relaxed text-black">
                   {content.manifesto.philosophies[0].desc}
                 </p>
              </div>
+             
              <div>
-                <h3 className="text-2xl font-bold uppercase mb-4 border-b-2 border-white pb-2 inline-block text-black">{content.manifesto.philosophies[1].title}</h3>
+                <h3 className="text-2xl font-bold uppercase mb-4 border-b-2 border-grey pb-2 inline-block text-black">{content.manifesto.philosophies[1].title}</h3>
+                <div>
+                  <p className="text-xl md:text-xl font-regular mb-10 leading-relaxed text-black">
+                  {content.manifesto.philosophies[1].desc0}
+                  </p>
+                </div>
                 <div className="flex gap-4 items-start">
                   <div className="bg-white text-black p-4 border-2 border-black rotate-[-2deg] w-1/2">
                      <div className="text-xs font-mono uppercase text-gray-500">{content.manifesto.philosophies[1].desc}</div>
@@ -222,7 +230,6 @@ const App = () => {
                   </div>
                 </div>
              </div>
-             
              <div className="md:col-span-2 mt-8 bg-black p-6 border-2 border-white">
                 <h4 className="font-mono text-[#FF3B30] mb-4 uppercase">{content.manifesto.howTo.title}</h4>
                 <ul className="grid md:grid-cols-3 gap-4">
@@ -238,7 +245,7 @@ const App = () => {
         </Section>
 
         {/* ARTIFACT WALL (CLUBS) */}
-        <Section id="artifacts" title={content.artifacts.title} className="p-0" noPadding>
+        <Section id="artifacts" title={content.artifacts.title} subtitle={content.artifacts.subtitle} className="p-0" noPadding>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-black gap-[2px] border-b-2 border-black">
             {content.clubs.map((club) => {
               const Icon = ICONS[club.icon] || Info;
@@ -318,11 +325,11 @@ const App = () => {
         </Section>
 
         {/* WARDROBE */}
-        <Section id="wardrobe" title={content.wardrobe.title}>
+        <Section id="wardrobe" title={content.wardrobe.title} subtitle={content.wardrobe.subtitle} >
           <p className="mb-8 font-mono max-w-2xl">
             {content.wardrobe.desc}
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
              {content.residents.map((resident) => {
                return (
                  <div key={resident.id} className="relative group flex flex-col items-center">
@@ -330,7 +337,7 @@ const App = () => {
                        <img 
                          src={resident.garmentImage} 
                          alt={`${resident.name}'s outfit`}
-                         className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                         className="w-full h-full object-cover contrast-125 transition-all duration-500"
                        />
                     </div>
                     
@@ -363,10 +370,19 @@ const App = () => {
 
            <div className="mt-12">
               <h3 className="text-2xl font-black uppercase mb-6">{content.ops.team} <span className="text-sm font-normal normal-case font-mono">{content.ops.teamSub}</span></h3>
-              <div className="flex gap-4">
-                 {[1, 2, 3].map(i => (
-                   <div key={i} className="w-24 h-24 bg-gray-300 rounded-full border-2 border-black overflow-hidden relative">
-                      <img src={`https://picsum.photos/100/100?random=${i}`} alt="Admin" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" />
+              <div className="grid md:grid-cols-3 gap-6">
+                 {[
+                    { id: 1, name: "Cyrus(Yujia) Chen", role: "Founder/General Operation" },
+                    { id: 2, name: "Sam(Guanyun) Ding", role: "Finance Director" },
+                 ].map(member => (
+                   <div key={member.id} className="flex items-center gap-4 bg-white p-4 border-2 border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-shadow">
+                      <div className="w-16 h-16 bg-gray-300 rounded-full border border-black overflow-hidden shrink-0">
+                          <img src={`images/${member.name}.jpg`} alt={member.name} className="w-full h-full object-cover hover:grayscale-0 transition-all" />
+                      </div>
+                      <div>
+                          <h5 className="font-bold uppercase text-lg leading-none">{member.name}</h5>
+                          <p className="font-mono text-xs text-gray-500 mt-1 uppercase">{member.role}</p>
+                      </div>
                    </div>
                  ))}
               </div>
@@ -379,7 +395,8 @@ const App = () => {
          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-b border-gray-800">
             <div className="p-8">
                <div className="mb-6">
-                  <Logo className="w-16 h-16" color="white" />
+                  {/* <Logo className="w-16 h-16" color="white" /> */}
+                  <img src="images/3.svg" alt="Decorative Logo" className="h-12 w-12" />
                </div>
                <div className="flex items-center gap-2 mb-4 text-[#FF3B30]">
                   <MapPin />

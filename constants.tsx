@@ -21,23 +21,40 @@ const CLUBS_DATA_BASE = [
   { id: 'racing-sim', icon: 'Car', color: 'bg-red-600', leaderImage: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" },
   { id: 'cs-club', icon: 'Terminal', color: 'bg-green-600', leaderImage: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" },
   { id: 'math-garden', icon: 'Sigma', color: 'bg-purple-600', leaderImage: "https://images.unsplash.com/photo-1530910401309-786d8b672727?auto=format&fit=crop&q=80&w=800" },
-  { id: 'ecobay', icon: 'Leaf', color: 'bg-emerald-500', leaderImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800" },
-  { id: 'social-affair', icon: 'MessageCircle', color: 'bg-pink-500', leaderImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" },
+  { id: 'ecoharbor', icon: 'Leaf', color: 'bg-emerald-500', leaderImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800" },
+  { id: 'societal-hotspot', icon: 'MessageCircle', color: 'bg-pink-500', leaderImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" },
   { id: 'entrepreneur', icon: 'Briefcase', color: 'bg-yellow-500', leaderImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800" },
   { id: 'mc-econ', icon: 'Box', color: 'bg-cyan-600', leaderImage: "https://images.unsplash.com/photo-1595795454984-b1b742cb6ae9?auto=format&fit=crop&q=80&w=800" },
 ];
 
 const RESIDENTS_DATA_BASE = [
-  { id: '1', name: 'Cyrus C.', clubId: '3d-print', garmentImage: "https://images.unsplash.com/photo-1556906781-9a412961d289?auto=format&fit=crop&q=80&w=800" }, // Hoodie
-  { id: '2', name: 'Sam D.', clubId: 'mc-econ', garmentImage: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=800" }, // Shirt
-  { id: '3', name: 'James Z.', clubId: 'cs-club', garmentImage: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=800" }, // Hat
-  { id: '4', name: 'Simon H.', clubId: 'social-affair', garmentImage: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800" }, // Jacket
-  { id: '5', name: 'Apple Z.', clubId: 'ecobay', garmentImage: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800" }, // T-shirt
-  { id: '6', name: 'Michael W.', clubId: 'flight-sim', garmentImage: "https://images.unsplash.com/photo-1620799140408-ed5341cd2431?auto=format&fit=crop&q=80&w=800" }, // Sweater
-  { id: '7', name: 'Watson W.', clubId: 'ecobay', garmentImage: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800" }, // T-shirt
-  { id: '8', name: 'Edgar Z.', clubId: 'flight-sim', garmentImage: "https://images.unsplash.com/photo-1620799140408-ed5341cd2431?auto=format&fit=crop&q=80&w=800" }, // Sweater
-  { id: '9', name: 'Xiaoleng W.', clubId: 'ecobay', garmentImage: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800" }, // T-shirt
-  { id: '10', name: 'Javier S.', clubId: 'flight-sim', garmentImage: "https://images.unsplash.com/photo-1620799140408-ed5341cd2431?auto=format&fit=crop&q=80&w=800" }, // Sweater
+  { id: '1', name: 'Cyrus C.', clubId: 'math-garden', garmentImage: "images/Cyrus.jpg" }, 
+  { id: '2', name: 'Sam D.', clubId: 'flight-sim', garmentImage: "images/Sam.jpg" }, 
+  { id: '3', name: 'James Z.', clubId: 'flight-sim', garmentImage: "images/James.jpg" },
+  { id: '4', name: 'Simon H.', clubId: 'mc-econ', garmentImage: "images/Simon.jpg" },
+  { id: '5', name: 'Apple Z.', clubId: 'racing-sim', garmentImage: "images/Apple.jpg" }, 
+  { id: '6', name: 'Michael W.', clubId: '3d-print', garmentImage: "images/Michael.jpg" },
+  { id: '7', name: 'Watson W.', clubId: 'flight-sim', garmentImage: "images/Watson.jpg" }, 
+  { id: '8', name: 'Edgar Z.', clubId: 'racing-sim', garmentImage: "images/Edgar.jpg" }, 
+  { id: '9', name: 'Andy W.', clubId: 'racing-sim', garmentImage: "images/Andy.jpg" }, 
+  { id: '10', name: 'Javier S.', clubId: 'ecoharbor', garmentImage: "images/Javier.jpg" }, 
+  { id: '11', name: 'Rey Q.', clubId: 'societal-hotspot', garmentImage: "images/Rey.jpg" }, 
+  { id: '12', name: 'Albert G.', clubId: 'societal-hotspot', garmentImage: "images/Albert.jpg" }, 
+  { id: '13', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Steve.jpg" }, 
+  { id: '14', name: 'Ethan W.', clubId: 'societal-hotspot', garmentImage: "images/Ethan.jpg" }, 
+  { id: '15', name: 'Luke L.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" }, 
+  { id: '16', name: 'Will Z.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '17', name: 'Charlie F.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '18', name: 'Stone W.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '19', name: 'Ruian W.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '20', name: 'Justin H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '21', name: 'Zee L.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '22', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '23', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '24', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '25', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+
+
 ] as const;
 
 export const CONTENT = {
@@ -57,11 +74,11 @@ export const CONTENT = {
         ideas: 'Ideas',
         collide: 'Collide'
       },
-      subHeadline: "The campus HQ for creators, leaders, and the 'productively blurry'.",
-      cta: "Don't just join a club—join the Guild.",
-      buttonEnter: "Enter The Blur",
+      subHeadline: "The campus HQ for creators and leaders that fosters 'productive collision'.",
+      cta: "Join the Guild.",
+      buttonEnter: "Enter The Collision",
       buttonArtifacts: "Explore Artifacts",
-      marquee: "+++ WELCOME TO THE PRODUCTIVE BLUR +++ IDEAS COLLIDE HERE +++ DO NOT EAT THE 3D PRINTER FILAMENT +++"
+      marquee: "+++ WELCOME TO THE PRODUCTIVE COLLISION +++ IDEAS COLLIDE HERE +++ DO NOT EAT THE 3D PRINTER FILAMENT +++"
     },
     poll: {
       tag: "LIVE POLL",
@@ -75,50 +92,55 @@ export const CONTENT = {
     },
     manifesto: {
       title: "The Manifesto",
+      subtitle: "Core Philosophy",
       philosophies: [
-        { title: "Productive Blur", desc: "We are not just a room. We are a collision space. We believe that the best ideas happen when a roboticist spills coffee on a philosopher's notebook." },
-        { title: "Dual Citizenship", desc: "Identity 1", label1: "Your Major / Club", sub1: "Robotics, Drama, CS...", desc2: "Identity 2", label2: "Approacher", sub2: "Guild Member" }
+        { title: "Productive collision", desc: "We are a group of collision. We believe that the best ideas happen when a roboticist spills coffee on a philosopher's notebook." },
+        { title: "A New Identity", desc0: "At here, members are called 'residents'. Each of us has deep connection with this group and the precious space we own. Regardless of vast difference in background, we are bond as 'Approachers'.", desc: "Previous", label1: "Your Background", sub1: "Your program, major, year cohort...", desc2: "Identity 2", label2: "Approacher", sub2: "Guild Resident" },
+        { title: "Shared Territory", desc: "We share the same space, encouraging residents of diverse backgrounds to collaborate and innovate together." },
       ],
       howTo: {
         title: "How to Participate",
         steps: [
-          "Bring a Mug. It marks your territory.",
+          "Wear your favorite outfit. It's your territorial marker.",
           "Respect the Vibe. Don't be a jerk.",
-          "Say hi to someone not in your major."
+          "Say hi to someone you do not know."
         ]
       }
     },
     artifacts: {
       title: "Artifact Wall",
+      subtitle: "Projects & Clubs",
       inspect: "Click to Inspect",
       status: "// STATUS: RECRUITING",
       buttonJoin: "Join Channel",
       buttonClose: "Close",
-      leaderTitle: "Club Lead",
+      leaderTitle: "Club Symbol",
       leaderSub: "Selected by Consensus",
       archive: "Archive: Skill Swap Tapes",
       files: "34 Files Available"
     },
     wardrobe: {
       title: "The Wardrobe",
-      desc: "Members don't have headshots. They have outfits. Hover to identify the resident.",
+      subtitle: "Resident Profiles",
+      desc: "Residents don't have headshots. They have outfits. Hover to identify them.",
       card: {
         affiliation: "Affiliation"
       }
     },
     ops: {
       title: "Room Ops",
-      team: "Core Team",
-      teamSub: "(Here to help, not to boss)",
+      subitle: "Administration",
+      team: "Admin",
+      teamSub: "(Have any questions? Find them here.)",
       rules: [
-        { id: "01", title: "Priority Seating", desc: "If the light is yellow, registered Guild Members get the comfy chairs. Guests take the stools." },
+        { id: "01", title: "Priority Seating", desc: "We welcome everyone, but registered Guild Residents get priority on the comfy chairs." },
         { id: "02", title: "The Open Chair", desc: "Don't bag seats. If you leave for more than 15 minutes, your seat is forfeit to the hive." },
         { id: "03", title: "The Snack Tax", desc: "Feed the hive. Bringing snacks grants you temporary immunity from Rule 02." }
       ]
     },
     footer: {
       location: "Location",
-      locationDesc: "Engineering Block B\nRoom 404 (Not Found)\nCampus North",
+      locationDesc: "Building 1, Rm. 1507, \nBeijing Royal School Campus",
       status: "System Status",
       statusDesc: "☕ Brewing Coffee",
       lastUpdate: "Last update: 4 mins ago",
@@ -134,19 +156,19 @@ export const CONTENT = {
         'racing-sim': 'Racing Sim Club',
         'cs-club': 'CS Club',
         'math-garden': 'Math Garden',
-        'ecobay': 'Ecobay',
-        'social-affair': 'Social Affair Decoding',
+        'ecoharbor': 'EcoHarbor',
+        'societal-hotspot': 'Societal Hotspot Decoding Seminar',
         'entrepreneur': 'Entrepreneurial Workshop',
         'mc-econ': 'Economics Via Minecraft'
-      }[c.id] || c.id,
+      }[c.id] || c.id, 
       shortDesc: {
         '3d-print': 'Layer by layer.',
         'flight-sim': 'Virtual altitude.',
         'racing-sim': 'Apex hunters.',
         'cs-club': 'Runtime errors welcome.',
         'math-garden': 'Cultivating logic.',
-        'ecobay': 'Campus agriculture.',
-        'social-affair': 'Human protocols.',
+        'ecoharbor': 'Campus agriculture.',
+        'societal-hotspot': 'Deep into human society',
         'entrepreneur': 'Zero to one.',
         'mc-econ': 'Supply, demand, blocks.'
       }[c.id] || '',
@@ -156,8 +178,8 @@ export const CONTENT = {
         'racing-sim': "Chasing tenths of a second. Our rigs cost more than our actual cars. We believe in trail braking and optimal racing lines above all else.",
         'cs-club': "We decode the matrix. Mostly debugging infinite loops and arguing about Vim vs Emacs. Caffeine is our primary fuel source.",
         'math-garden': "Where abstract algebra meets actual dirt. We model growth patterns and optimize sunlight algorithms using fractals and fertilizer.",
-        'ecobay': "Sustainable living on a student budget. Hydroponics, aquaponics, and saving the planet one lettuce leaf at a time. Green thumbs required.",
-        'social-affair': "Deconstructing human interaction protocols. We analyze why you felt awkward at that party and map social dynamics like network topologies.",
+        'ecoharbor': "Sustainable living on a student budget. Hydroponics, aquaponics, and saving the planet one lettuce leaf at a time. Green thumbs required.",
+        'societal-hotspot': "Deconstructing Society's hotspot, get insight into social dynamics and human behavior.",
         'entrepreneur': "Building the next unicorn or at least a profitable lemonade stand. We speak in pitch decks, KPIs, and pizza consumption rates.",
         'mc-econ': "Simulating market crashes in a block-based economy. Inflation is real, diamonds are scarce, and the villagers are unionizing."
       }[c.id] || ''
@@ -165,20 +187,34 @@ export const CONTENT = {
     residents: RESIDENTS_DATA_BASE.map(r => ({
       ...r,
       major: {
-        '1': 'Mechanical Eng.',
-        '2': 'Economics',
-        '3': 'Computer Sci',
-        '4': 'Philosophy',
-        '5': 'Biology',
-        '6': 'Aerospace'
+        '1': 'Math/Psych',
+        '2': 'Econometrics',
+        '3': 'Physics',
+        '4': 'Economics',
+        '5': 'Computer Science',
+        '6': 'Chemistry',
+        '7': 'Aerospace Engineering',
+        '8': 'Material Science & Chemistry',
+        '9': 'Physics',
+        '10': 'Environmental Science',
+        '11': 'Psychology',
+        '12': 'Public Policy',
+        '13': 'EE & CE',
+
       }[r.id] || 'Student',
       motto: {
-        '1': "If it breaks, print it again.",
-        '2': "Emeralds are money.",
+        '1': "Fortuna Favet Fortibus.",
+        '2': "Too young too simple, sometimes naive",
         '3': "It works on my machine.",
-        '4': "Why are we here?",
-        '5': "Photosynthesis is cool.",
-        '6': "V1, Rotate."
+        '4': "Don't thank me, thank ____",
+        '5': "I AM SEAL!",
+        '6': "V1, Rotate.",
+        '7': "Ja sam ptica nebeska.",
+        '8': "Savor every moment.",
+        '10': "The hundred and first blow.",
+        '11': "‘The world is a fine place,and worth fighting for.’ I agree with the second part",
+        '12': "兼容并蓄，实事求是。",
+        '13': "画个原理图看看？",
       }[r.id] || ''
     })) as Resident[]
   },
@@ -235,7 +271,7 @@ export const CONTENT = {
       status: "// 状态：招募中",
       buttonJoin: "加入频道",
       buttonClose: "关闭",
-      leaderTitle: "社团负责人",
+      leaderTitle: "社团形象标志",
       leaderSub: "共识推选",
       archive: "归档：技能交换录像",
       files: "34 个文件可用"
@@ -275,8 +311,8 @@ export const CONTENT = {
         'racing-sim': '赛车模拟社',
         'cs-club': '计算机社',
         'math-garden': '数学花园',
-        'ecobay': '生态湾',
-        'social-affair': '社交解码研讨会',
+        'ecoharbor': '生态港',
+        'societal-hotspot': '社会实践解码社',
         'entrepreneur': '创业工坊',
         'mc-econ': 'Minecraft经济学'
       }[c.id] || c.id,
@@ -286,8 +322,8 @@ export const CONTENT = {
         'racing-sim': '弯心猎手。',
         'cs-club': '欢迎运行时错误。',
         'math-garden': '培育逻辑。',
-        'ecobay': '校园农业。',
-        'social-affair': '人类协议。',
+        'ecoharbor': '校园农业。',
+        'societal-hotspot': '深入社会',
         'entrepreneur': '从0到1。',
         'mc-econ': '供给，需求，方块。'
       }[c.id] || '',
@@ -297,8 +333,8 @@ export const CONTENT = {
         'racing-sim': "追逐十分之一秒的差距。我们的设备比我们的真车还贵。我们信仰循迹刹车和最佳赛车线。",
         'cs-club': "我们解码矩阵。大部分时间在调试无限循环和争论Vim与Emacs的优劣。咖啡因是我们的主要燃料。",
         'math-garden': "抽象代数遇见真实泥土的地方。我们利用分形和肥料模拟生长模式并优化日照算法。",
-        'ecobay': "学生预算下的可持续生活。水培、鱼菜共生，一次一片生菜叶地拯救地球。需要园艺天赋。",
-        'social-affair': "解构人类互动协议。我们分析你为什么在那个派对上感到尴尬，并将社交动态映射为网络拓扑。",
+        'ecoharbor': "学生预算下的可持续生活。水培、鱼菜共生，一次一片生菜叶地拯救地球。需要园艺天赋。",
+        'societal-hotspot': "解构社会热点，深入了解社会动态和人类行为。",
         'entrepreneur': "建立下一个独角兽，或者至少是一个盈利的柠檬水摊。我们用商业计划书、关键绩效指标和披萨消耗率交流。",
         'mc-econ': "在方块经济中模拟市场崩盘。通货膨胀是真实的，钻石是稀缺的，村民们正在组建工会。"
       }[c.id] || ''
@@ -306,20 +342,34 @@ export const CONTENT = {
     residents: RESIDENTS_DATA_BASE.map(r => ({
       ...r,
       major: {
-        '1': '机械工程',
-        '2': '经济学',
-        '3': '计算机科学',
-        '4': '哲学',
-        '5': '生物学',
-        '6': '航空航天'
-      }[r.id] || 'Student',
+        '1': '数学&心理学',
+        '2': '计量经济学',
+        '3': '物理学',
+        '4': '经济学',
+        '5': '计算机科学',
+        '6': '化学',
+        '7': '航空航天',
+        '8': '材料科学与化学',
+        '9': '物理学',
+        '10': '环境科学',
+        '11': '心理学',
+        '12': '公共政策',
+        '13': '电子与计算机工程',
+
+      }[r.id] || '学生',
       motto: {
-        '1': "如果坏了，就再打一个。",
-        '2': "绿宝石就是金钱。",
-        '3': "在我的机器上能跑。",
-        '4': "我们为什么在这里？",
-        '5': "光合作用很酷。",
-        '6': "V1, 抬轮。"
+        '1': "运气眷顾勇者",
+        '2': "年少轻狂，偶尔天真",
+        '3': "It works on my machine.",
+        '4': "别谢我，谢____",
+        '5': "我是海豹！",
+        '6': "V1, Rotate.",
+        '7': "Ja sam ptica nebeska.",
+        '8': "珍惜每一刻。",
+        '10': "百发百中。",
+        '11': "‘这世界是个好地方，值得生活’ 我同意后半句",
+        '12': "兼容并蓄，实事求是。",
+        '13': "画个原理图看看？",
       }[r.id] || ''
     })) as Resident[]
   }
