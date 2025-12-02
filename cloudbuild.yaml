@@ -1,0 +1,24 @@
+steps:
+  # 1. Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/approacher-studio-online:$COMMIT_SHA', '.']
+
+  # 2. Push the image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/approacher-studio-online:$COMMIT_SHA']
+
+  # 3. FORCE Deployment to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'approacher-studio-online'  # This must match your Service Name exactly
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/approacher-studio-online:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'              # CHANGE THIS if your region is not us-central1
+      - '--allow-unauthenticated'
+
+images:
+  - 'gcr.io/$PROJECT_ID/approacher-studio-online:$COMMIT_SHA'
