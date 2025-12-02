@@ -42,7 +42,7 @@ const App = () => {
       <header className="sticky top-0 z-50 bg-white border-b-2 border-black flex justify-between items-center p-4">
         <div className="flex items-center gap-3">
           {/* <Logo className="h-8 w-8" color="black" /> */}
-          <img src="server/public/images/2.svg" alt="Decorative Logo" className="h-12 w-12" />
+          <img src="public/images/2.svg" alt="Decorative Logo" className="h-12 w-12" />
           <h1 className="text-2xl font-black tracking-tighter uppercase hidden sm:block">Approacher<span className="text-[#FF3B30]">.Studio</span></h1>
         </div>
         
@@ -115,7 +115,7 @@ const App = () => {
 
                 {/* Decorative Watermark Logo */}
                 <div className="absolute right-[-250px] bottom-[-280px] opacity-10 pointer-events-none hidden lg:block z-0">
-                   <img src="server/public/images/2.svg" alt="Decorative Logo" className="h-[900px] w-[900px]" />
+                   <img src="public/images/2.svg" alt="Decorative Logo" className="h-[900px] w-[900px]" />
                    
                 </div>
              </div>
@@ -377,7 +377,7 @@ const App = () => {
                  ].map(member => (
                    <div key={member.id} className="flex items-center gap-4 bg-white p-4 border-2 border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-shadow">
                       <div className="w-16 h-16 bg-gray-300 rounded-full border border-black overflow-hidden shrink-0">
-                          <img src={`server/public/images/${member.name}.jpg`} alt={member.name} className="w-full h-full object-cover hover:grayscale-0 transition-all" />
+                          <img src={`public/images/${member.name}.jpg`} alt={member.name} className="w-full h-full object-cover hover:grayscale-0 transition-all" />
                       </div>
                       <div>
                           <h5 className="font-bold uppercase text-lg leading-none">{member.name}</h5>
@@ -396,7 +396,7 @@ const App = () => {
             <div className="p-8">
                <div className="mb-6">
                   {/* <Logo className="w-16 h-16" color="white" /> */}
-                  <img src="server/public/images/3.svg" alt="Decorative Logo" className="h-12 w-12" />
+                  <img src="public/images/3.svg" alt="Decorative Logo" className="h-12 w-12" />
                </div>
                <div className="flex items-center gap-2 mb-4 text-[#FF3B30]">
                   <MapPin />
