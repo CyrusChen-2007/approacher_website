@@ -16,15 +16,15 @@ export const ICONS: Record<string, React.FC<any>> = {
 };
 
 const CLUBS_DATA_BASE = [
-  { id: '3d-print', icon: 'Printer', color: 'bg-orange-500', leaderImage: "https://images.unsplash.com/photo-1581092921461-eab6245b0262?auto=format&fit=crop&q=80&w=800" },
-  { id: 'flight-sim', icon: 'Plane', color: 'bg-blue-500', leaderImage: "https://images.unsplash.com/photo-1544654573-039c0953c8dc?auto=format&fit=crop&q=80&w=800" },
-  { id: 'racing-sim', icon: 'Car', color: 'bg-red-600', leaderImage: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" },
-  { id: 'cs-club', icon: 'Terminal', color: 'bg-green-600', leaderImage: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" },
-  { id: 'math-garden', icon: 'Sigma', color: 'bg-purple-600', leaderImage: "https://images.unsplash.com/photo-1530910401309-786d8b672727?auto=format&fit=crop&q=80&w=800" },
-  { id: 'ecoharbor', icon: 'Leaf', color: 'bg-emerald-500', leaderImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800" },
-  { id: 'societal-hotspot', icon: 'MessageCircle', color: 'bg-pink-500', leaderImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" },
-  { id: 'entrepreneur', icon: 'Briefcase', color: 'bg-yellow-500', leaderImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800" },
-  { id: 'mc-econ', icon: 'Box', color: 'bg-cyan-600', leaderImage: "https://images.unsplash.com/photo-1595795454984-b1b742cb6ae9?auto=format&fit=crop&q=80&w=800" },
+  { id: '3d-print', icon: 'Printer', color: 'bg-orange-500', leaderImage: "images/Machine on Table.jpg" },
+  { id: 'flight-sim', icon: 'Plane', color: 'bg-blue-500', leaderImage: "images/Black Gray Robot Toy.jpg" },
+  { id: 'racing-sim', icon: 'Car', color: 'bg-red-600', leaderImage: "images/Race Car Driving Photo.jpg" },
+  { id: 'cs-club', icon: 'Terminal', color: 'bg-green-600', leaderImage: "images/Computer Screen Code Photo.jpg" },
+  { id: 'math-garden', icon: 'Sigma', color: 'bg-purple-600', leaderImage: "images/Close Up Paper Numbers.jpg" },
+  { id: 'ecoharbor', icon: 'Leaf', color: 'bg-emerald-500', leaderImage: "images/Green Plants on Soil.jpg" },
+  { id: 'societal-hotspot', icon: 'MessageCircle', color: 'bg-pink-500', leaderImage: "images/Green Ceramic Statue Photo.jpg" },
+  { id: 'entrepreneur', icon: 'Briefcase', color: 'bg-yellow-500', leaderImage: "images/Person near Stairs Unsplash.jpg" },
+  { id: 'mc-econ', icon: 'Box', color: 'bg-cyan-600', leaderImage: "images/Free Money Image.jpg" },
 ];
 
 const RESIDENTS_DATA_BASE = [
@@ -34,25 +34,25 @@ const RESIDENTS_DATA_BASE = [
   { id: '4', name: 'Simon H.', clubId: 'mc-econ', garmentImage: "images/Simon.jpg" },
   { id: '5', name: 'Apple Z.', clubId: 'racing-sim', garmentImage: "images/Apple.jpg" }, 
   { id: '6', name: 'Michael W.', clubId: '3d-print', garmentImage: "images/Michael.jpg" },
-  { id: '7', name: 'Watson W.', clubId: 'flight-sim', garmentImage: "images/Watson.jpg" }, 
+  { id: '7', name: 'Watson W.', clubId: 'racing-sim', garmentImage: "images/Watson.jpg" }, 
   { id: '8', name: 'Edgar Z.', clubId: 'racing-sim', garmentImage: "images/Edgar.jpg" }, 
   { id: '9', name: 'Andy W.', clubId: 'racing-sim', garmentImage: "images/Andy.jpg" }, 
   { id: '10', name: 'Javier S.', clubId: 'ecoharbor', garmentImage: "images/Javier.jpg" }, 
   { id: '11', name: 'Rey Q.', clubId: 'societal-hotspot', garmentImage: "images/Rey.jpg" }, 
   { id: '12', name: 'Albert G.', clubId: 'societal-hotspot', garmentImage: "images/Albert.jpg" }, 
-  { id: '13', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Steve.jpg" }, 
-  { id: '14', name: 'Ethan W.', clubId: 'societal-hotspot', garmentImage: "images/Ethan.jpg" }, 
-  { id: '15', name: 'Luke L.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" }, 
-  { id: '16', name: 'Will Z.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '17', name: 'Charlie F.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '18', name: 'Stone W.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '13', name: 'Steve H.', clubId: 'math-garden', garmentImage: "images/Steve.jpg" }, 
+  { id: '14', name: 'Ethan W.', clubId: 'entrepreneur', garmentImage: "images/Ethan.jpg" }, 
+  { id: '15', name: 'Luke L.', clubId: 'flight-sim', garmentImage: "images/Undefined.jpg" }, 
+  { id: '16', name: 'Will Z.', clubId: 'flight-sim', garmentImage: "images/Undefined.jpg" },
+  { id: '17', name: 'Charlie F.', clubId: 'societal-hotspot', garmentImage: "images/Charlie.jpg" },
+  { id: '18', name: 'Stone W.', clubId: 'ecoharbor', garmentImage: "images/Stone.jpg" },
   { id: '19', name: 'Ruian W.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '20', name: 'Justin H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '21', name: 'Zee L.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '22', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '23', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '24', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
-  { id: '25', name: 'Steve H.', clubId: 'societal-hotspot', garmentImage: "images/Undefined.jpg" },
+  { id: '20', name: 'Justin H.', clubId: 'cs-club', garmentImage: "images/Undefined.jpg" },
+  { id: '21', name: 'Zee L.', clubId: '3d-print', garmentImage: "images/Undefined.jpg" },
+  { id: '22', name: 'Anonymous', clubId: 'entrepreneur', garmentImage: "images/Undefined.jpg" },
+  { id: '23', name: 'Anonymous', clubId: 'entrepreneur', garmentImage: "images/Undefined.jpg" },
+  { id: '24', name: 'Anonymous', clubId: 'entrepreneur', garmentImage: "images/Undefined.jpg" },
+  { id: '25', name: 'Anonymous', clubId: 'entrepreneur', garmentImage: "images/Undefined.jpg" },
 
 
 ] as const;
@@ -95,8 +95,7 @@ export const CONTENT = {
       subtitle: "Core Philosophy",
       philosophies: [
         { title: "Productive collision", desc: "We are a group of collision. We believe that the best ideas happen when a roboticist spills coffee on a philosopher's notebook." },
-        { title: "A New Identity", desc0: "At here, members are called 'residents'. Each of us has deep connection with this group and the precious space we own. Regardless of vast difference in background, we are bond as 'Approachers'.", desc: "Previous", label1: "Your Background", sub1: "Your program, major, year cohort...", desc2: "Identity 2", label2: "Approacher", sub2: "Guild Resident" },
-        { title: "Shared Territory", desc: "We share the same space, encouraging residents of diverse backgrounds to collaborate and innovate together." },
+        { title: "A New Identity", desc0: "At here, members are called 'residents'. Each of us are deeply connected with this guild and the precious space we own. Regardless of vast difference in background, we are bond as 'Approachers'.", desc: "Previous", label1: "Your Background", sub1: "Your program, major, year cohort...", desc2: "New", label2: "Approacher", sub2: "Guild Resident" },
       ],
       howTo: {
         title: "How to Participate",
@@ -189,17 +188,19 @@ export const CONTENT = {
       major: {
         '1': 'Math/Psych',
         '2': 'Econometrics',
-        '3': 'Physics',
+        '3': 'EE & CE',
         '4': 'Economics',
         '5': 'Computer Science',
         '6': 'Chemistry',
         '7': 'Aerospace Engineering',
         '8': 'Material Science & Chemistry',
-        '9': 'Physics',
+        '9': 'Applied Math',
         '10': 'Environmental Science',
         '11': 'Psychology',
         '12': 'Public Policy',
         '13': 'EE & CE',
+        '17': 'Psychology',
+        '18': 'Physics & CS',
 
       }[r.id] || 'Student',
       motto: {
@@ -211,10 +212,13 @@ export const CONTENT = {
         '6': "V1, Rotate.",
         '7': "Ja sam ptica nebeska.",
         '8': "Savor every moment.",
+        '9': "吾日三省吾身，能否不做，能否明天做，能否别人做。",
         '10': "The hundred and first blow.",
         '11': "‘The world is a fine place,and worth fighting for.’ I agree with the second part",
         '12': "兼容并蓄，实事求是。",
         '13': "画个原理图看看？",
+        '17': 'Anything you can acquire is only another thing you\'ll lose.',
+        '18': "清清爽爽，义无反顾。",
       }[r.id] || ''
     })) as Resident[]
   },
@@ -234,11 +238,11 @@ export const CONTENT = {
         ideas: '在此',
         collide: '碰撞'
       },
-      subHeadline: "创作者、领袖和“跨界者”的校园大本营。",
-      cta: "别只加入社团——加入公会。",
+      subHeadline: "创作者、领袖们参与“生产力碰撞”的的校园大本营。",
+      cta: "即刻加入本公会。",
       buttonEnter: "进入模糊地带",
       buttonArtifacts: "探索造物",
-      marquee: "+++ 欢迎来到高效模糊地带 +++ 灵感在此碰撞 +++ 请勿食用3D打印耗材 +++"
+      marquee: "+++ 欢迎来到生产力碰撞地带 +++ 灵感在此碰撞 +++ 请勿食用3D打印耗材 +++"
     },
     poll: {
       tag: "实时投票",
@@ -252,21 +256,23 @@ export const CONTENT = {
     },
     manifesto: {
       title: "宣言",
+      subtitle: "核心哲学",
       philosophies: [
-        { title: "跨界共生", desc: "我们不只是一个房间，而是一个碰撞空间。我们相信，当机器人专家把咖啡洒在哲学家的笔记本上时，最棒的创意就诞生了。" },
-        { title: "双重身份", desc: "身份 1", label1: "你的专业 / 社团", sub1: "机器人, 戏剧, 计算机...", desc2: "身份 2", label2: "Approacher", sub2: "公会成员" }
+        { title: "高效碰撞", desc: "我们是一个碰撞空间。我们相信，当机器人专家把咖啡洒在哲学家的笔记本上时，最棒的创意就诞生了。" },
+        { title: "全新身份", desc0: "在这里，成员被称为“居民”。我们每个人都与这个群体和我们拥有的宝贵空间有着深厚的联系。无论背景差异多大，我们都以“Approacher”的身份紧密相连。", desc: "原有身份", label1: "你的背景", sub1: "你的专业、年级、社团...", desc2: "新身份", label2: "Approacher", sub2: "公会居民" },
       ],
       howTo: {
         title: "参与指南",
         steps: [
-          "带个马克杯。这是你的领地标记。",
+          "穿上你最喜欢的衣服，这是你的领地标记。",
           "尊重氛围。别做个讨厌鬼。",
-          "和非你专业的同学打个招呼。"
+          "和你不认识的同学打个招呼。"
         ]
       }
     },
     artifacts: {
       title: "造物墙",
+      subtitle: "项目与社团",
       inspect: "点击查看",
       status: "// 状态：招募中",
       buttonJoin: "加入频道",
@@ -277,25 +283,27 @@ export const CONTENT = {
       files: "34 个文件可用"
     },
     wardrobe: {
-      title: "成员衣橱",
-      desc: "成员们没有头像，只有穿搭。悬停以识别成员身份。",
+      title: "衣橱",
+      subtitle: "居民档案",
+      desc: "居民们没有头像，只有穿搭。悬停以识别他们的身份。",
       card: {
         affiliation: "所属"
       }
     },
     ops: {
       title: "空间运营",
+      subitle: "行政管理",
       team: "核心团队",
-      teamSub: "（提供帮助，而非发号施令）",
+      teamSub: "（有任何问题？找他们就对了。）",
       rules: [
-        { id: "01", title: "优先座位", desc: "注册公会成员优先使用舒适座位。访客请坐圆凳。" },
+        { id: "01", title: "优先座位", desc: "我们欢迎所有人来做客，不过注册公会成员优先使用舒适座位。" },
         { id: "02", title: "空椅原则", desc: "不要占座。如果你离开超过15分钟，你的座位将充公给集体。" },
         { id: "03", title: "零食税", desc: "投喂集体。带零食来可以让你暂时豁免第二条规则。" }
       ]
     },
     footer: {
       location: "位置",
-      locationDesc: "工程楼 B座\n404室 (Not Found)\n北校区",
+      locationDesc: "一号楼 1507，\n 北京王府学校校园",
       status: "系统状态",
       statusDesc: "☕ 正在煮咖啡",
       lastUpdate: "最后更新：4分钟前",
@@ -312,7 +320,7 @@ export const CONTENT = {
         'cs-club': '计算机社',
         'math-garden': '数学花园',
         'ecoharbor': '生态港',
-        'societal-hotspot': '社会实践解码社',
+        'societal-hotspot': '社会事件解码社',
         'entrepreneur': '创业工坊',
         'mc-econ': 'Minecraft经济学'
       }[c.id] || c.id,
@@ -355,6 +363,8 @@ export const CONTENT = {
         '11': '心理学',
         '12': '公共政策',
         '13': '电子与计算机工程',
+        '17': '心理学',
+        '18': '物理学与计算机科学',
 
       }[r.id] || '学生',
       motto: {
@@ -366,10 +376,13 @@ export const CONTENT = {
         '6': "V1, Rotate.",
         '7': "Ja sam ptica nebeska.",
         '8': "珍惜每一刻。",
+        '9': "吾日三省吾身，能否不做，能否明天做，能否别人做。",
         '10': "百发百中。",
         '11': "‘这世界是个好地方，值得生活’ 我同意后半句",
         '12': "兼容并蓄，实事求是。",
         '13': "画个原理图看看？",
+        '17': 'Anything you can acquire is only another thing you\'ll lose.',
+        '18': "清清爽爽，义无反顾。",
       }[r.id] || ''
     })) as Resident[]
   }
