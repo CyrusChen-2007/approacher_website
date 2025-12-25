@@ -75,7 +75,7 @@ export const CONTENT = {
         collide: 'Collide'
       },
       subHeadline: "The campus HQ for creators and leaders that fosters 'productive collision'.",
-      cta: "Join the Guild.",
+      cta: "Join the Creative Hub.",
       buttonEnter: "Enter The Collision",
       buttonArtifacts: "Explore Artifacts",
       marquee: "+++ WELCOME TO THE PRODUCTIVE COLLISION +++ IDEAS COLLIDE HERE +++ DO NOT EAT THE 3D PRINTER FILAMENT +++"
@@ -95,7 +95,7 @@ export const CONTENT = {
       subtitle: "Core Philosophy",
       philosophies: [
         { title: "Productive collision", desc: "We are a group of collision. We believe that the best ideas happen when a roboticist spills coffee on a philosopher's notebook." },
-        { title: "A New Identity", desc0: "At here, members are called 'residents'. Each of us are deeply connected with this guild and the precious space we own. Regardless of vast difference in background, we are bond as 'Approachers'.", desc: "Previous", label1: "Your Background", sub1: "Your program, major, year cohort...", desc2: "New", label2: "Approacher", sub2: "Guild Resident" },
+        { title: "A New Identity", desc0: "At here, members are called 'residents'. Each of us are deeply connected with this guild and the precious space we own. Regardless of vast difference in background, we are bond as 'Approachers'.", desc: "Original", label1: "Your Background", sub1: "Your program, concentrations, year cohort...", desc2: "New", label2: "Approacher", sub2: "Hub Resident" },
       ],
       howTo: {
         title: "How to Participate",
@@ -132,9 +132,9 @@ export const CONTENT = {
       team: "Admin",
       teamSub: "(Have any questions? Find them here.)",
       rules: [
-        { id: "01", title: "Priority Seating", desc: "We welcome everyone, but registered Guild Residents get priority on the comfy chairs." },
+        { id: "01", title: "Student Governance", desc: "Registered Members gets the right to vote in Member Assembly for decision-making." },
         { id: "02", title: "The Open Chair", desc: "Don't bag seats. If you leave for more than 15 minutes, your seat is forfeit to the hive." },
-        { id: "03", title: "The Snack Tax", desc: "Feed the hive. Bringing snacks grants you temporary immunity from Rule 02." }
+        { id: "03", title: "The Snack Fund", desc: "Endowment of foods grants you the most comfy chair." }
       ]
     },
     footer: {
@@ -209,7 +209,7 @@ export const CONTENT = {
         '3': "It works on my machine.",
         '4': "Don't thank me, thank ____",
         '5': "I AM SEAL!",
-        '6': "V1, Rotate.",
+        '6': "Vision always with Action",
         '7': "Ja sam ptica nebeska.",
         '8': "Savor every moment.",
         '9': "吾日三省吾身，能否不做，能否明天做，能否别人做。",

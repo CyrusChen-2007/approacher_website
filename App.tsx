@@ -10,8 +10,17 @@ import { Info, MapPin, Coffee, AlertTriangle, BookOpen } from 'lucide-react';
 
 const App = () => {
   const [selectedClub, setSelectedClub] = useState<string | null>(null);
-  const [votes, setVotes] = useState({ hotdog: 142, sandwich: 118 });
-  const [hasVoted, setHasVoted] = useState(false);
+  
+  // Initialize state from localStorage if available
+  const [votes, setVotes] = useState(() => {
+    const saved = localStorage.getItem('poll_votes');
+    return saved ? JSON.parse(saved) : { hotdog: 1, sandwich: 2 };
+  });
+  
+  const [hasVoted, setHasVoted] = useState(() => {
+    return localStorage.getItem('poll_has_voted') === 'false';
+  });
+
   const [lang, setLang] = useState<Language>('en');
 
   const content = CONTENT[lang];
@@ -30,10 +39,15 @@ const App = () => {
 
   const handleVote = (option: 'hotdog' | 'sandwich') => {
     if (hasVoted) return;
-    setVotes(prev => ({ ...prev, [option]: prev[option] + 1 }));
+    
+    const newVotes = { ...votes, [option]: votes[option] + 1 };
+    setVotes(newVotes);
     setHasVoted(true);
+    
+    localStorage.setItem('poll_votes', JSON.stringify(newVotes));
+    localStorage.setItem('poll_has_voted', 'true');
   };
-
+  
   const selectedClubData = content.clubs.find(c => c.id === selectedClub);
 
   return (
@@ -372,8 +386,9 @@ const App = () => {
               <h3 className="text-2xl font-black uppercase mb-6">{content.ops.team} <span className="text-sm font-normal normal-case font-mono">{content.ops.teamSub}</span></h3>
               <div className="grid md:grid-cols-3 gap-6">
                  {[
-                    { id: 1, name: "Cyrus(Yujia) Chen", role: "Founder/General Operation" },
+                    { id: 1, name: "Cyrus(Yujia) Chen", role: "General Director" },
                     { id: 2, name: "Sam(Guanyun) Ding", role: "Finance Director" },
+                    { id: 3, name: "Simon(Ge) Hu", role: "Logistics Manager" },
                  ].map(member => (
                    <div key={member.id} className="flex items-center gap-4 bg-white p-4 border-2 border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-shadow">
                       <div className="w-16 h-16 bg-gray-300 rounded-full border border-black overflow-hidden shrink-0">

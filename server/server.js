@@ -174,6 +174,53 @@ app.use('/api-proxy', async (req, res, next) => {
     }
 });
 
+// Vote API
+const votesFile = path.join(__dirname, 'votes.json');
+
+app.get('/api/votes', (req, res) => {
+    fs.readFile(votesFile, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading votes file:', err);
+            // If file doesn't exist, return default
+            return res.json({ hotdog: 142, sandwich: 118 });
+        }
+        try {
+            res.json(JSON.parse(data));
+        } catch (e) {
+            console.error('Error parsing votes file:', e);
+            res.json({ hotdog: 142, sandwich: 118 });
+        }
+    });
+});
+
+app.post('/api/vote', (req, res) => {
+    const { option } = req.body;
+    if (!option || (option !== 'hotdog' && option !== 'sandwich')) {
+        return res.status(400).json({ error: 'Invalid option' });
+    }
+
+    fs.readFile(votesFile, 'utf8', (err, data) => {
+        let votes = { hotdog: 142, sandwich: 118 };
+        if (!err) {
+            try {
+                votes = JSON.parse(data);
+            } catch (e) {
+                console.error('Error parsing votes file:', e);
+            }
+        }
+
+        votes[option] = (votes[option] || 0) + 1;
+
+        fs.writeFile(votesFile, JSON.stringify(votes, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing votes file:', err);
+                return res.status(500).json({ error: 'Failed to save vote' });
+            }
+            res.json(votes);
+        });
+    });
+});
+
 const webSocketInterceptorScriptTag = `<script src="/public/websocket-interceptor.js" defer></script>`;
 
 // Prepare service worker registration script content
